@@ -329,6 +329,14 @@ $('#downloadSVG').click(function() {
 
 });
 
+$('#downloadEMF').click(function() {
+
+    $('#downloadEMFForm [name=svg]').text(createSVGDocument())
+
+    $('#downloadEMFForm').submit()
+
+});
+
 $('#downloadPNG').click(function() {
 
     var canvas = document.createElement('canvas');
