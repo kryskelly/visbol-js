@@ -13,7 +13,6 @@ var genbank = require('./lib/genbank')
 
 var getDisplayList = require('./getDisplayList')
 
-
 var design = new Design({
     element: document.getElementById('design'),
     font: sbolvImprovedDirectionality
@@ -319,6 +318,10 @@ function createSVGDocument() {
     ].join('\n');
 }
 
+/* expose to phantom
+ */
+if(typeof window !== 'undefined')
+    window.createSVGDocument = createSVGDocument
 
 $('#downloadSVG').click(function() {
 
